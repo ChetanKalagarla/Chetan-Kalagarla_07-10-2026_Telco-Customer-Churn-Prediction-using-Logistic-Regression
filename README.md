@@ -1,80 +1,84 @@
+<div align="center">
+
 # 📡 Telco Customer Churn Prediction
 
-## Project Overview
-This project predicts whether a telecom customer is **Likely to Churn** or **Likely to Stay**.
+### Predicting Customer Churn using Machine Learning
 
-The solution uses:
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib
-- Seaborn
+![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Model](https://img.shields.io/badge/Model-Logistic%20Regression-2E7D32?style=for-the-badge)
 
-## Business Goal
-Identify customers who may leave the company so that the business can provide retention offers before they churn.
+**A machine-learning solution to identify telecom customers who are likely to leave and support proactive retention.**
 
-## Project Structure
+</div>
+
+---
+
+## 🎯 Project Objective
+
+Customer churn directly affects telecom revenue. When a customer leaves, the company loses recurring revenue and may spend additional money to acquire a replacement customer.
+
+This project builds a **Customer Churn Prediction System** that:
+
+- 📊 Understands customer information
+- 🧹 Cleans and prepares the data
+- 🔎 Selects relevant customer features
+- 🤖 Trains a Logistic Regression model
+- 📈 Estimates churn probability
+- 🏷️ Classifies customers as **Likely to Churn** or **Likely to Stay**
+- 🧪 Evaluates model performance
+- 💼 Converts model results into business insights
+
+---
+
+## 🧠 Machine Learning Approach
+
+| Component | Used in Project |
+|---|---|
+| Problem Type | Binary Classification |
+| Target | `Churn` |
+| Model | Logistic Regression |
+| Churn | `1` / `Yes` |
+| Stay | `0` / `No` |
+| Classification Threshold | `0.50` |
+| Train/Test Split | `80% / 20%` |
+| Random State | `42` |
+
+### Prediction Flow
+
 ```text
-Telco_Customer_Churn_Prediction/
+Customer Data
+     ↓
+Data Cleaning
+     ↓
+Feature Selection
+     ↓
+Encoding + Scaling
+     ↓
+Logistic Regression
+     ↓
+Churn Probability
+     ↓
+Probability ≥ 0.50 → Likely to Churn
+Probability < 0.50 → Likely to Stay
+
+Telco-Customer-Churn-Prediction
 │
-├── data/
+├── 📁 data
 │   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
 │
-├── outputs/
-│   ├── confusion_matrix.png
+├── 📁 outputs
 │   ├── churn_distribution.png
+│   ├── confusion_matrix.png
+│   ├── customer_predictions.csv
 │   └── model_results.txt
 │
-├── src/
+├── 📁 src
 │   └── churn_prediction.py
 │
-├── requirements.txt
-└── README.md
-```
-
-## Step 1 — Download the Dataset
-Download the **Telco Customer Churn** CSV dataset from Kaggle.
-
-Place the CSV inside:
-```text
-data/
-```
-
-Rename it to:
-```text
-WA_Fn-UseC_-Telco-Customer-Churn.csv
-```
-
-## Step 2 — Install Packages
-Open the VS Code / Visual Studio terminal in this project folder:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Step 3 — Run
-```bash
-python src/churn_prediction.py
-```
-
-## What the program does
-1. Loads the dataset
-2. Performs basic data understanding
-3. Cleans the data
-4. Selects relevant customer features
-5. Encodes categorical data
-6. Splits data into training and testing sets
-7. Trains a Logistic Regression model
-8. Calculates churn probability
-9. Classifies customers as Likely to Churn / Likely to Stay
-10. Evaluates Accuracy, Precision, Recall and F1-score
-11. Displays a confusion matrix
-12. Creates predictions for unseen customer records
-13. Saves useful outputs
-
-## Business Interpretation
-In churn prediction, missing a customer who is actually going to leave can be more costly than wrongly targeting a loyal customer. Therefore, **Recall for the Churn class** is an important metric.
-
-## One Improvement
-A useful improvement is to tune the classification threshold based on business cost. Instead of always using 0.50, the company can choose a threshold such as 0.40 if the priority is to catch more potential churn customers.
+├── 📁 .vscode
+│   └── launch.json
+│
+├── 📄 README.md
+└── 📄 requirements.txt
