@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Telco Churn Prediction",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/churn_prediction.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}

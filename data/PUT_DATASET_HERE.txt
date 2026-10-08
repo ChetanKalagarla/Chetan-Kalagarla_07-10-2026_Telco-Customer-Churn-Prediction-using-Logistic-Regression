@@ -1,0 +1,7 @@
+Place the Kaggle Telco Customer Churn CSV file in this folder.
+
+Expected filename:
+WA_Fn-UseC_-Telco-Customer-Churn.csv
+
+After placing the dataset here, run:
+python src/churn_prediction.py

@@ -1,0 +1,46 @@
+
+TELCO CUSTOMER CHURN - MODEL REPORT
+====================================
+
+Model:
+Logistic Regression
+
+Classification threshold:
+0.5
+
+Dataset:
+7043 customer records
+
+Training records:
+5634
+
+Testing records:
+1409
+
+Performance:
+Accuracy  = 0.7381
+Precision = 0.5043
+Recall    = 0.7834
+F1 Score  = 0.6136
+ROC-AUC   = 0.8413
+
+Confusion Matrix:
+True Negative  = 747
+False Positive = 288
+False Negative = 81
+True Positive  = 293
+
+Business Interpretation:
+The model correctly identified 293 actual churn customers.
+It wrongly flagged 288 customers who did not churn.
+It missed 81 customers who actually churned.
+
+Business Recommendation:
+Missing an actual churn customer can result in lost recurring revenue.
+Therefore, churn recall should receive strong attention when selecting
+the final model and classification threshold.
+
+Suggested Improvement:
+Tune the probability threshold according to the financial cost of
+false positives and false negatives. A lower threshold can identify
+more potential churn customers for proactive retention campaigns.
